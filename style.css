@@ -1,0 +1,107 @@
+body {
+    color: #456280;
+    background-image: url(kepek/v3.jpg);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+main {
+    background-color: #cfc6b5;
+    max-width: 800px;
+    margin: auto;
+    padding: 10px;
+    display: grid;
+    grid-template-areas: 
+    "h h"
+    "n n"
+    "s r"
+    "f f";
+}
+
+nav ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    list-style-type: none;
+    text-align: center;
+}
+
+header {
+    background-color: #506a85;
+    width: 300px;
+    grid-area: h;
+}
+
+nav {
+    grid-area: n;
+}
+
+footer {
+    background-color: #506a85;
+    color: #cfc6b5;
+    text-align: center;
+    grid-area: f;
+    padding: 6px;
+}
+
+aside {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-area: s;
+    padding: 20px;
+}
+
+article {
+    grid-area: r;
+    text-align: center;
+    padding: 20px;
+}
+
+aside img {
+    width: 100%;
+    border: 5px solid #7893ae;
+    margin: 10px;
+    gap: 5px;
+}
+
+li {
+    padding: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: #456280;
+}
+
+a:hover {
+    color: #f3efe9;
+}
+
+table th {
+    background-color: #506a85;
+    color: #f3efe9;
+}
+
+.feher {
+    background-color: #f3efe9;
+}
+
+article table tr td {
+    border: 1px solid #506a85;
+}
+
+
+@media screen and (max-width: 450px) {
+    body {
+        width: 100%;
+        font-size: 5vw;
+      }
+    main{
+        grid-template-columns: 1fr;
+        grid-template-rows: 50px auto auto auto 50px;
+        grid-template-areas: 
+        "h"
+        "n"
+        "s"
+        "r"
+        "f";
+    }
+}
